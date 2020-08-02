@@ -1,14 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".main.ui.fragment.MainFragment">
-
-    <TextView
+        tools:context=".main.ui.fragment.MainFragment"
+        android:orientation="vertical">
+    <TextView android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/title_main_screen"
+              android:layout_gravity="center"
+              android:textAppearance="@android:style/TextAppearance.Material.Headline"
+              android:layout_margin="@dimen/large_margin"/>
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/repositories_list"
+            android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"/>
+            android:layout_height="match_parent"/>
 
-</FrameLayout>
+</LinearLayout>

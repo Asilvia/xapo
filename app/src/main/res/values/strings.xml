@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">xapo</string>
+    <string name="title_main_screen">Best of Github repositories of kotlin</string>
     <string name="action_settings">Settings</string>
 </resources>

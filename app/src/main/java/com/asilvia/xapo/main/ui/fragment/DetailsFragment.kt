@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.asilvia.xapo.R
+import com.asilvia.xapo.main.viewmodel.DetailsViewModel
 
 class DetailsFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package com.asilvia.xapo.main.ui.fragment
+package com.asilvia.xapo.main.viewmodel
 
 import androidx.lifecycle.ViewModel;
 
