@@ -1,7 +1,5 @@
 package com.asilvia.xapo.main.viewmodel
 
-import android.os.Bundle
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -11,10 +9,8 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(val githubRepositories: GithubRepositories): ViewModel() {
 
-
     private val repositoriesObservable = MutableLiveData<Repositories>()
     private val snackbarObservable = MutableLiveData<String?>()
-
 
 
     fun init(){

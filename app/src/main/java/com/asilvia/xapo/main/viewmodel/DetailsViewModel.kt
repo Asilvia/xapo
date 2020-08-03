@@ -11,6 +11,10 @@ class DetailsViewModel : ViewModel() {
     }
 
     fun getName() = repository?.name
-
+    fun getOwner() = repository?.owner?.login
+    fun getDescription() = repository?.description
+    fun getStars() = repository?.stargazers_count.toString()
+    fun getForks() = repository?.forks_count.toString()
+    fun getHomePage() = repository?.homepage
 
 }

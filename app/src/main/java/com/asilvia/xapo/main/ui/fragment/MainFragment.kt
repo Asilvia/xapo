@@ -12,11 +12,11 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
 import com.asilvia.xapo.R
 import com.asilvia.xapo.main.ui.adapter.RepositoriesAdapter
 import com.asilvia.xapo.main.viewmodel.MainViewModel
 import com.asilvia.xapo.shared.model.Item
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.main_fragment.repositories_list
 import org.koin.android.viewmodel.ext.android.viewModel
 
@@ -42,10 +42,9 @@ class MainFragment : Fragment(), RepositoriesAdapter.Companion.OnRepositoryClick
     private fun initializeObservers() {
         viewModel.getRepositoryObservable().observe(this, Observer {
             viewAdapter.setList(it.items)
-            Log.d("Teste", "list size: " + viewAdapter.itemCount)
         })
         viewModel.getSnackBarObservable().observe(this, Observer{
-            Log.d("Teste", "ERROOOOO: " + it)
+           //Error handling
         })
 
     }
@@ -66,7 +65,6 @@ class MainFragment : Fragment(), RepositoriesAdapter.Companion.OnRepositoryClick
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         viewAdapter = RepositoriesAdapter(this)
-
         createList()
     }
 

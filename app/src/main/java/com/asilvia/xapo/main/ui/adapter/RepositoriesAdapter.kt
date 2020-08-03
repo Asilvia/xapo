@@ -11,15 +11,6 @@ import com.asilvia.xapo.shared.model.Item
 import kotlinx.android.synthetic.main.repositories_listitem.view.*
 
 
-
-
-
-
-
-
-
-
-
 class RepositoriesAdapter( val onRepositoryClick: OnRepositoryClick ):RecyclerView.Adapter<RepositoriesAdapter.Companion.RepositoriesViewHolder>(){
 
     private var list: List<Item> = emptyList()
@@ -47,7 +38,6 @@ class RepositoriesAdapter( val onRepositoryClick: OnRepositoryClick ):RecyclerVi
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepositoriesViewHolder {
-        // create a new view
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.repositories_listitem, parent, false)
         return RepositoriesViewHolder(itemView, onRepositoryClick)
     }
