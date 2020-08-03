@@ -1,6 +1,7 @@
 package com.asilvia.xapo
 
 import android.app.Application
+import com.asilvia.xapo.main.di.DetailsModule
 import com.asilvia.xapo.main.di.MainModule
 import com.asilvia.xapo.shared.di.ApiModule
 import org.koin.android.ext.koin.androidContext
@@ -12,8 +13,10 @@ class XapoApplication : Application() {
 
     var listofModules = listOf(
         ApiModule.retrofitModule,
-        MainModule.module,
-        ApiModule.apiModule)
+        ApiModule.apiModule,
+        DetailsModule.module,
+        MainModule.module
+        )
 
 
     override fun onCreate() {

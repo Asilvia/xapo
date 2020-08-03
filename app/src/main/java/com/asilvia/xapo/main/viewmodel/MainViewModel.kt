@@ -16,7 +16,8 @@ class MainViewModel(val githubRepositories: GithubRepositories): ViewModel() {
     private val snackbarObservable = MutableLiveData<String?>()
 
 
-    fun dispatch(args: Bundle?) {
+
+    fun init(){
         getRepositories()
     }
 
